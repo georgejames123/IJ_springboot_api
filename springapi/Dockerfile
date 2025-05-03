@@ -4,6 +4,16 @@ FROM maven:3.8.4-openjdk-17-slim AS build
 # Set working directory inside the container
 WORKDIR /app
 
+# Metadata labels
+LABEL maintainer="George <georgejames123@yahoo.com>"
+LABEL version="1.0.0"
+LABEL description="Spring Boot API Docker image for testing"
+LABEL org.opencontainers.image.source="https://github.com/georgejames123/IJ_springboot_api"
+LABEL org.opencontainers.image.licenses="NA"
+LABEL org.opencontainers.image.vendor="moonlitsoft"
+LABEL org.opencontainers.image.created="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+LABEL org.opencontainers.image.revision="git-commit-sha"
+
 # Copy project files
 COPY pom.xml ./
 COPY src ./src
