@@ -10,7 +10,6 @@ LABEL version="1.0.0"
 LABEL description="Spring Boot API Docker image for testing"
 LABEL org.opencontainers.image.source="https://github.com/georgejames123/IJ_springboot_api"
 LABEL org.opencontainers.image.licenses="NA"
-LABEL org.opencontainers.image.vendor="moonlitsoft"
 LABEL org.opencontainers.image.created="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 LABEL org.opencontainers.image.revision="git-commit-sha"
 
