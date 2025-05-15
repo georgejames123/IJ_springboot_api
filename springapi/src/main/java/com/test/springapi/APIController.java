@@ -14,4 +14,16 @@ public class APIController {
         System.out.println("Hello from Spring Boot!  " + new Date().toString());
         return "Hello from Spring Boot!  " + new Date().toString();
     }
+
+    @PostMapping("/echo")
+    public String echo(@RequestBody String message) {
+        System.out.println("Echo: " + message);
+        return "Echo: " + message;
+    }
+
+    @GetMapping("/time")
+    public String time() {
+        System.out.println("Time : " + new Date().toString());
+        return "Time : " + new Date().toString();
+    }
 }

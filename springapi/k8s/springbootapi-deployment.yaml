@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springbootapi-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springbootapi
+  template:
+    metadata:
+      labels:
+        app: springbootapi
+    spec:
+      containers:
+      - name: springbootapi
+        image: georgejames2815/springapi-springbootapiapp:latest
+        ports:
+        - containerPort: 8080
